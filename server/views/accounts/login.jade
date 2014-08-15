@@ -1,0 +1,35 @@
+extends ../../layouts/default
+
+block content
+  .container
+    div.row-fluid
+      form.well.span4(method="POST", action="/auth/local")
+        h4.well-header Login
+        label(for="email")
+        input(type="text", name="email", placeholder="E-mail")
+        br
+        label(for="password")
+        input(type="password", name="password", placeholder="Password")
+        br
+        button.btn(type="submit")
+          | Login
+
+      div.span2
+        h1.center or
+
+      form.well.span4(method="POST", action="/register")
+        h4.well-header Sign Up
+        label(for="name")
+        input(type="text", name="name", placeholder="Name")
+        br
+        label(for="email")
+        input(type="text", name="email", placeholder="E-mail")
+        br
+        label(for="password")
+        input(type="password", name="password", placeholder="Password")
+        br
+        label(for="password_repeat")
+        input(type="password", name="password_repeat", placeholder="Password one more time")
+        br
+        button.btn(type="submit")
+          | Sign Up

@@ -1,0 +1,12 @@
+div
+  form(id="drawingForm", name="drawingForm", ng-submit="save()")
+    h3 Add a Drawing...
+    p
+      input(type="text", name="number", ng-model="drawing.number", placeholder="Drawing #", required)
+    p
+      input(type="text", name="description", ng-model="drawing.description", placeholder="Description")
+    p
+      textarea(name="notes", ng-model="drawing.notes", placeholder="Notes")
+    p
+      button.btn(ng-click="cancel()") Cancel
+      button.btn.btn-primary(type="submit") Save

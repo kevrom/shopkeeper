@@ -1,0 +1,22 @@
+form(id="drawingForm", name="drawingForm", ng-submit="save()")
+
+  div.top-btn.pull-right
+    button.btn(ng-click="cancel()") Cancel
+    button.btn.btn-primary(type="submit") Save
+
+  table.table.table-bordered
+    tbody
+      tr
+        td.span2
+          strong Drawing #
+        td {{drawing.number}}
+      tr
+        td.span2
+          strong Description
+        td
+          input(type="text", name="description", ng-model="drawing.description", placeholder="Description")
+      tr
+        td.span2
+          strong Notes
+        td
+          textarea(name="notes", ng-model="drawing.notes", placeholder="Notes")

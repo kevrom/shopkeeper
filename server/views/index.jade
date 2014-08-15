@@ -1,0 +1,27 @@
+extends ../layouts/default
+
+block content
+  div.container
+    h1 
+      | Shopkeeper 
+      i Beta
+    if user
+      p
+        a(href="/s") Continue to Shopkeeper
+    if !user
+      p Please log in to gain access to Shopkeeper.
+
+    div.page-header
+      h3 A new way to organize your machine shop.
+      div
+        | Shopkeeper's aim is to help decrease time looking for programs, setting up parts, and making 
+        | setup sheets that are prone to being lost. I've created this application to solve a 
+        | problem that I experience myself every day of work, and expanded on it to be able to allow 
+        | anyone to take full advantage. Please keep in mind that this is indeed a beta version, 
+        | which means that many things can change in the future.  There is likely a possibility that
+        | that I will charge a small monthly fee to use this service, which will cover my time and expenses. 
+        | If/when this happens, I will of course give plenty of notice, and happily work with anyone that 
+        | wishes to discontinue service and needs to retrieve their data.  I only wish to help people. 
+        | I will make all attempts at making sure the database persists.  I cannot, however, make any guarantees.
+        | If you have any ideas to help improve the site, please let me know.  And refer to my "about" 
+        | page for a list of upcoming features.

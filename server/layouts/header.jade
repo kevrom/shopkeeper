@@ -1,0 +1,60 @@
+div.navbar.navbar-inverse.navbar-fixed-top
+  div.navbar-inner
+    div.container
+      a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand(href="/")
+        | Shopkeeper
+      div.nav-collapse.collapse
+        ul.nav
+          - if (typeof(active) === 'undefined') { active = false }
+          li(class="#{ (active == 'home') ? 'active' : '' }")
+            a(href="/")
+              | Home
+          if user
+            li(class="#{ (active == 'shop') ? 'active' : '' }")
+              a(href="/s")
+                | Shopkeeper Application
+          li(class="#{ (active == 'about') ? 'active' : '' }")
+            a(href="/about")
+              | About
+          li(class="#{ (active == 'contactus') ? 'active' : '' }")
+            a(href="/contactus")
+              | Contact Us
+        ul.nav.pull-right
+          if user
+            li.dropdown
+              a.dropdown-toggle(href="#", data-toggle="dropdown")
+                | #{ user.name } 
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href="/u")
+                    i.icon-user
+                    |  Settings
+                li.divider
+                li
+                  a(href="/logout")
+                    i.icon-off
+                    |  Log Out
+          else
+            li
+              a(href="/login")
+                | Create Account
+            li.dropdown
+              a.dropdown-toggle(href="#", data-toggle="dropdown")
+                | Login
+                b.caret
+              ul.dropdown-menu.dropdown-login
+                li
+                  form(method="POST", action="/auth/local")
+                    label(for="email")
+                    input(type="text", name="email", placeholder="E-mail")
+                    br
+                    label(for="password")
+                    input(type="password", name="password", placeholder="Password")
+                    br
+                    button.btn(type="submit")
+                      | Login

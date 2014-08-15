@@ -1,0 +1,25 @@
+div(ng-controller="MachinesListCtrl")
+  p
+    input.input-large.search-query(type="text", ng-model="search", placeholder="Search")
+    a.btn.btn-primary.pull-right(href='/s/machines/create', role='button')
+      i.icon-plus.icon-white
+      |  Add a Machine
+
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th.span3 Name
+        th.span3 Machine #
+        th.span2 Actions
+    tbody
+      tr(ng-repeat="machine in machines | filter:search | orderBy:number")
+        td
+          a(ng-href="/s/machines/{{machine.id}}") {{machine.name}}
+        td {{machine.number}}
+        td
+          p
+            a(ng-href="/s/programs/create?MachineId={{machine.id}}", role="button")
+              | [ New Program ]
+          p
+            a(ng-href="/s/programs/list?MachineId={{machine.id}}", role="button")
+              | [ List Programs ]

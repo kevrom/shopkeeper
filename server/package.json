@@ -1,0 +1,21 @@
+{
+    "name": "node-shopkeeper",
+    "description": "Shopkeeper",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "3.0.6",
+        "crypto": "0.0.3",
+        "pg": "0.7.2",
+        "sequelize": "*",
+        "express-validator": "0.3.2",
+        "underscore": "1.4.4",
+        "stylus": "0.32.0",
+        "jade": "0.28.1",
+        "passport": "0.1.15",
+        "passport-google": "0.2.0",
+        "passport-local": "0.1.6",
+        "connect-redis": "1.4.5",
+        "nib": "*"
+    }
+}

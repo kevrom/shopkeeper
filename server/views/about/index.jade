@@ -1,0 +1,63 @@
+extends ../../layouts/default
+
+block content
+  .container
+    h2 What's under the hood, Kevin?
+    p I'm glad you asked, person.
+    p
+    p
+      li
+        strong Server/Framework: 
+        a(href="http://nodejs.org/") Node.js 
+        | / 
+        a(href="http://expressjs.com/") Express.js 
+        | behind 
+        a(href="http://nginx.org/") Nginx 
+        | , kept alive with 
+        a(href="http://upstart.ubuntu.com/") Upstart 
+        | / 
+        a(href="https://github.com/nodejitsu/forever") Forever
+      li
+        strong Client-side Javascript Framework: 
+        a(href="http://angularjs.org/") Angular.js 
+        | / 
+        a(href="http://angular-ui.github.io/") AngularUI 
+        | / 
+        a(href="http://jquery.com/") jQuery 
+        | / 
+        a(href="http://jqueryui.com/") jQueryUI
+      li
+        strong CSS Framework: 
+        a(href="http://twitter.github.io/bootstrap/") Twitter Bootstrap 
+        | (because I'm terrible at design)
+      li
+        strong Database/ORM: 
+        a(href="http://www.sequelizejs.com/") Sequelize.js
+      li
+        strong Authentication: 
+        a(href="http://passportjs.org/") Passport.js
+      li
+        strong User sessions: 
+        a(href="https://github.com/visionmedia/connect-redis") Redis
+      li
+        strong HTML/CSS: 
+        a(href="http://jade-lang.com/") Jade 
+        | / 
+        a(href="http://learnboost.github.io/stylus/") Stylus
+    p
+    p This has been a great learning project, and solves a need I have as a machinist.
+    p Still plenty left to do though!
+    
+    p
+      strong Todo list:
+      li Priority: Enable user account creation, including email verification
+      li Priority: Mobile-friendly version of the app
+      li Priority: Make the details of Machines/Drawings/Programs easier to read, with better formatted information
+      li Allow the uploading of images (will need to add a disclaimer in case people upload actual part drawings)
+      li Add a more robust account information section
+      li Make the user interface resemble Gmail a bit more, so I can give the right side more viewspace
+      li Make a nifty favicon
+      li A short tutorial and help section
+      li Make things less Bootstrap-y
+      li Make a contact form for feature requests
+      li Get visible abdominal muscles

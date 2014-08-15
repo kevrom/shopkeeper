@@ -1,0 +1,22 @@
+div
+  form(id="programForm", name="programForm", ng-submit="save()")
+    h3 Add a Program...
+    p
+      input(ui-select2='drawingId', ng-model="program.DrawingId", data-placeholder="Which Drawing?")
+        //- option
+        //- option(ng-repeat="drawing in drawings", value="{{drawing.id}}") {{drawing.number}} {{drawing.description}}
+    p
+      input(ui-select2='machineId', ng-model="program.MachineId", data-placeholder="Which Machine?")
+        //- option
+        //- option(ng-repeat="machine in machines", value="{{machine.id}}") {{machine.name}}
+    p
+      input(type="text", name="number", ng-model="program.number", placeholder="Program #", required)
+    p
+      input(type="text", name="location", ng-model="program.location", placeholder="Location (e.g. USB 1)")
+    p
+      input(type="text", name="description", ng-model="program.description", placeholder="Description")
+    p
+      textarea(name="notes", ng-model="program.notes", placeholder="Notes")
+    p
+      button.btn(ng-click="cancel()") Cancel
+      button.btn.btn-primary(type="submit") Save

@@ -1,0 +1,2 @@
+sudo ln -s /path/to/node-shopkeeper/deploy/nginx /etc/nginx/sites-enabled/node-shopkeeper
+sudo cp /path/to/node-shopkeeper/deploy/upstart.conf /etc/init/node-shopkeeper.conf

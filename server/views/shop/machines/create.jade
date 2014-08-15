@@ -1,0 +1,14 @@
+div
+  form(id="machineForm", name="machineForm", ng-submit="save()")
+    h3 Add a Machine...
+    p
+      input(type="text", name="name", ng-model="machine.name", placeholder="Machine Name", required)
+    p
+      input(type="text", name="number", ng-model="machine.number", placeholder="Machine #")
+    p
+      input(type="text", name="description", ng-model="machine.description", placeholder="Description")
+    p
+      textarea(name="notes", ng-model="machine.notes", placeholder="Notes")
+    p
+      button.btn(ng-click="cancel()") Cancel
+      button.btn.btn-primary(type="submit") Save

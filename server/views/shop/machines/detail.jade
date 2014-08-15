@@ -1,0 +1,27 @@
+a.btn.btn-danger.pull-left.top-btn(ng-click='remove()', role='button')
+  i.icon-remove.icon-white
+  |  Delete this Machine
+
+a.btn.btn-primary.pull-right.top-btn(ng-href='/s/machines/{{machine.id}}/edit', role='button')
+  i.icon-edit.icon-white
+  |  Edit this Machine
+
+table.table.table-bordered
+  tbody
+    tr
+      td.span2
+        strong Machine Name
+      td {{machine.name}}
+    tr
+      td.span2
+        strong Machine #
+      td {{machine.number}}
+    tr
+      td.span2
+        strong Description
+      td {{machine.description}}
+    tr
+      td.span2
+        strong Notes
+      td
+        pre {{machine.notes}}

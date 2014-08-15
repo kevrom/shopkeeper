@@ -1,0 +1,26 @@
+div(ng-controller="DrawingsListCtrl")
+  p
+    input.input-large.search-query(type='text', ng-model='search', placeholder='Search')
+    a.btn.btn-primary.pull-right(href='/s/drawings/create', role='button')
+      i.icon-plus.icon-white
+      |  Add a Drawing
+
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th.span2 Drawing #
+        th.span3 Description
+        th.span4 Programs Available
+    tbody
+      tr(ng-repeat='drawing in drawings | filter:search | orderBy:"number"')
+        td
+          a(ng-href='/s/drawings/{{drawing.id}}') {{drawing.number}}
+        td {{drawing.description}}
+        td
+          ul
+            li(ng-repeat='program in drawing.programs')
+              a(ng-href='/s/programs/{{program.id}}') {{program.machine.name}}
+              span(ng-hide="!program.description") 
+                |  ({{program.description}})
+            li
+              a(ng-href="/s/programs/create?DrawingId={{drawing.id}}") [ New Program ]
