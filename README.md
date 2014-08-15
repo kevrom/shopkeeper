@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Shopkeeper
 
 This web application was created to organize and speed up the process of 
